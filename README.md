@@ -1,5 +1,32 @@
 # shahry-task
 
+## Running the server
+
+1. Running with **flask**
+
+```
+flask --app server run
+```
+
+2. Running with **Docker**:
+
+```
+$ sudo docker build -t my_flask_app .
+$ sudo docker run -p 5000:5000 my_flask_app
+```
+
+## Sending Request
+
+send request using **curl**:
+
+```
+curl --location --request POST 'http://localhost:5000/extract_info' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "national_id": "28712180101181"
+}'
+```
+
 ### Extracting Birth date
 
 ##### Getting the century
