@@ -68,7 +68,8 @@ def extract_governorate(national_id):
 
 
 def extract_gender(national_id):
-    gender_digit = int(national_id[13:14])
+    gender_digit = int(national_id[12:13])
+    print(gender_digit)
     if gender_digit % 2 == 0:
         gender='Female'
     else:
